@@ -1,0 +1,31 @@
+{
+  "name": "codexten/yii-module-report",
+  "type": "library",
+  "description": "report module for yii 2.0 or higher",
+  "require": {
+    "codexten/yii-web": "~2.0.0",
+    "codexten/yii-module-api": "~2.0.0",
+    "symfony/intl": "*",
+    "kartik-v/yii2-widget-select2": "@dev",
+    "kartik-v/yii2-widget-switchinput": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "codexten\\yii\\modules\\report\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    },
+    "sconfig-plugin": {
+      "core": "config/core.php",
+      "modulereport": "config/modulereport.php",
+      "modulereportApi": [
+        "$moduleApi",
+        "config/modulereportApi.php"
+      ],
+      "migrationNamespaces": "config/migrationNamespaces.php"
+    }
+  }
+}
