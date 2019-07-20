@@ -7,7 +7,11 @@ use codexten\yii\web\Controller;
 class ReportController extends Controller
 {
     public $reportClass;
+    public $gridViewClass;
 
+    /**
+     * {@inheritDoc}
+     */
     public function getPathMaps()
     {
         return [
@@ -18,8 +22,13 @@ class ReportController extends Controller
 
     public function actionIndex()
     {
+        $searchModel = new $this->reportClass();
 
-        return $this->render('index');
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'gridViewClass' => $this->gridViewClass,
+        ]);
     }
 
 }
