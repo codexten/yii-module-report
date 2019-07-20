@@ -8,6 +8,14 @@ class ReportController extends Controller
 {
     public $reportClass;
 
+    public function getPathMaps()
+    {
+        return [
+            '@moduleReport/views/report',
+        ];
+    }
+
+
     public function actionIndex()
     {
 
