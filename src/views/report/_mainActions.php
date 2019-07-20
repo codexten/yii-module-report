@@ -14,7 +14,7 @@ ExportMenu::class
 ?>
 
 <?php Modal::begin([
-    'header' => '<h2>Hello world</h2>',
+    'header' => 'Search',
     'toggleButton' => ['label' => 'search'],
 ]); ?>
 
