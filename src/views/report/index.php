@@ -15,9 +15,9 @@ $this->title = Inflector::pluralize(Inflector::camel2words(Inflector::id2camel(Y
     'title' => $this->title,
 ]) ?>
 
-<?php $page->beginContent('main-actions') ?>
+<?php $page->beginContent('main-actions', $_params_) ?>
 
-<?= $this->render('_mainActions', compact(['page'])) ?>
+<?= $this->render('_mainActions', \yii\helpers\ArrayHelper::merge($_params_, compact(['page']))) ?>
 
 <?php $page->endContent() ?>
 

@@ -1,7 +1,6 @@
 <?php
 
-
-namespace codexten\yii\modules\report\models\reports;
+namespace codexten\yii\modules\report\reports;
 
 
 use codexten\yii\db\SearchModelTrait;

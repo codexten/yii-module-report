@@ -8,6 +8,7 @@ class ReportController extends Controller
 {
     public $reportClass;
     public $gridViewClass;
+    public $exportMenuClass;
 
     /**
      * {@inheritDoc}
@@ -30,6 +31,7 @@ class ReportController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'gridViewClass' => $this->gridViewClass,
+            'exportMenuClass' => $this->exportMenuClass,
         ]);
     }
 
