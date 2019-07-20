@@ -17,13 +17,13 @@ $this->title = Inflector::pluralize(Inflector::camel2words(Inflector::id2camel(Y
 
 <?php $page->beginContent('main-actions') ?>
 
-<?= $this->render('index/_mainActions', compact(['page'])) ?>
+<?= $this->render('_mainActions', compact(['page'])) ?>
 
 <?php $page->endContent() ?>
 
 <?php $page->beginContent('table') ?>
 
-<?= $this->render('index/_grid', $_params_) ?>
+<?= $this->render('_grid', $_params_) ?>
 
 <?php $page->endContent() ?>
 

@@ -2,7 +2,9 @@
 
 namespace codexten\yii\modules\report\models\reports;
 
-interface ReportInterface
+use codexten\yii\db\SearchModelInterface;
+
+interface ReportInterface extends SearchModelInterface
 {
 
 }
