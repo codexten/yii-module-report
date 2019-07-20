@@ -8,7 +8,7 @@ use yii\helpers\Inflector;
 /* @var $searchModel */
 /* @var $_params_ array */
 
-$this->title = Inflector::pluralize(Inflector::camel2words(Inflector::id2camel(Yii::$app->controller->id)))
+$this->title = Inflector::pluralize(Inflector::camel2words(Inflector::id2camel(Yii::$app->controller->id))) . ' Reports';
 ?>
 
 <?php $page = IndexPage::begin([
