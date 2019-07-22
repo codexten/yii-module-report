@@ -11,6 +11,8 @@ use yii\web\View;
 
 <?= $this->render('_fields', ['from' => $form, 'model' => $model]) ?>
 
+<?= Html::hiddenInput('show_result', true) ?>
+
 <?= Html::submitButton('Search', ['class' => 'btn btn-success']) ?>
 
 <?= Html::resetButton('Reset', ['class' => 'btn btn-primary']) ?>
