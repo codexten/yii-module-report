@@ -13,8 +13,10 @@ use yii\web\View;
 
 ExportMenu::class
 ?>
+<?= Html::dropDownList('pagesize', 10, [10 => 10, 20 => 20, 50 => 50, 100 => 100], ['id' => 'pagesize']
+) ?>
 
-<?= Html::a('<i class="fa fa-arrow-left"></i>', ['index'],['class'=>'btn btn-primary']) ?>
+<?= Html::a('<i class="fa fa-arrow-left"></i>', ['index'], ['class' => 'btn btn-primary']) ?>
 
 <?= $exportMenuClass::widget([
     'dataProvider' => $dataProvider,
