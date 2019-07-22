@@ -25,6 +25,7 @@ class ReportController extends Controller
     {
         $searchModel = new $this->reportClass();
 
+        
         $dataProvider = $searchModel->search(\Yii::$app->request->get());
 
         return $this->render('index', [
