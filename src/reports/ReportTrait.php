@@ -8,5 +8,4 @@ use codexten\yii\db\SearchModelTrait;
 trait ReportTrait
 {
     use SearchModelTrait;
-
 }

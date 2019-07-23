@@ -32,8 +32,12 @@ class ReportController extends Controller
         if (!$showResult) {
             return $this->render('search', ['model' => $searchModel]);
         }
-        
+
         $dataProvider = $searchModel->search(\Yii::$app->request->get());
+        $perPage = \Yii::$app->request->get('per-page');
+        if ($perPage == -1) {
+            $dataProvider->pagination = false;
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
