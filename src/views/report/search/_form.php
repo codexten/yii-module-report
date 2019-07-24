@@ -9,7 +9,7 @@ use yii\web\View;
 
 <?php $form = ActiveForm::begin(['method' => 'get']) ?>
 
-<?= $this->render('_fields', ['from' => $form, 'model' => $model]) ?>
+<?= $this->render('_fields', ['form' => $form, 'model' => $model]) ?>
 
 <?= Html::hiddenInput('show_result', true) ?>
 
