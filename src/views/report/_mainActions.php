@@ -21,11 +21,12 @@ JS;
 
 $this->registerJs($js);
 ?>
+<?= Html::a('Show All', Url::current(['per-page' => -1]), ['class' => 'btn']) ?>
 
 <?= Html::beginForm(Url::current(), 'get', ['id' => 'searchConfigForm', 'class' => 'inline-block']) ?>
 
 <?= Html::dropDownList('per-page',
-    Yii::$app->request->get('per-page'),
+    Yii::$app->request->get('per-page',20),
     [10 => 10, 20 => 20, 50 => 50, 100 => 100, -1 => 'Show All'],
     ['id' => 'pagesize']) ?>
 
