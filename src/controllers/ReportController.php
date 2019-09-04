@@ -23,8 +23,7 @@ class ReportController extends Controller
             '@moduleReport/views/report',
         ];
     }
-
-
+    
     public function actionIndex()
     {
         $searchModel = new $this->reportClass();
