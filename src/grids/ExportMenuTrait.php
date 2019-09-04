@@ -12,6 +12,9 @@ trait ExportMenuTrait
     public function init()
     {
         $this->onRenderSheet = function (Worksheet $sheet, self $widget) {
+            if (!$this->hasMethod('getFooterRows')) {
+                return;
+            }
             $lastRow = $this->dataProvider->getTotalCount();
             $footerRows = $this->getFooterRowsContent();
 
@@ -30,6 +33,7 @@ trait ExportMenuTrait
             }
 
         };
+
         parent::init();;
     }
 

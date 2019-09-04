@@ -9,6 +9,9 @@ trait ReportFooterTrait
 {
     public function getFooterRowsContent()
     {
+        if (!$this->hasMethod('getFooterRows')){
+            return [];
+        }
         $rows = [];
         $columns = $this->columns();
         $footerRows = $this->getFooterRows();
