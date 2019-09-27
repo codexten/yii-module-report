@@ -6,4 +6,5 @@
 
 <?= $gridViewClass::widget([
     'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
 ]) ?>

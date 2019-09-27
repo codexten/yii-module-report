@@ -38,4 +38,5 @@ $this->registerJs($js);
 
 <?= $exportMenuClass::widget([
     'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
 ]); ?>
