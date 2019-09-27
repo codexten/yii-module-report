@@ -2,6 +2,7 @@
 
 namespace codexten\yii\modules\report\controllers;
 
+use codexten\yii\modules\report\reports\ReportInterface;
 use codexten\yii\web\Controller;
 
 /**
@@ -26,13 +27,15 @@ class ReportController extends Controller
     
     public function actionIndex()
     {
+        /* @var $searchModel ReportInterface*/
         $searchModel = new $this->reportClass();
         $showResult = \Yii::$app->request->get('show_result', false);
+        $dataProvider = $searchModel->search(\Yii::$app->request->get());
+
         if (!$showResult) {
             return $this->render('search', ['model' => $searchModel]);
         }
 
-        $dataProvider = $searchModel->search(\Yii::$app->request->get());
         $perPage = \Yii::$app->request->get('per-page');
         if ($perPage == -1) {
             $dataProvider->pagination = false;

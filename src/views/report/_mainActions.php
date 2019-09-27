@@ -26,13 +26,15 @@ $this->registerJs($js);
 <?= Html::beginForm(Url::current(), 'get', ['id' => 'searchConfigForm', 'class' => 'inline-block']) ?>
 
 <?= Html::dropDownList('per-page',
-    Yii::$app->request->get('per-page',20),
+    Yii::$app->request->get('per-page', 20),
     [10 => 10, 20 => 20, 50 => 50, 100 => 100, -1 => 'Show All'],
     ['id' => 'pagesize']) ?>
 
 <?= Html::endForm() ?>
 
-<?= Html::a('<i class="fa fa-arrow-left"></i>', ['index'], ['class' => 'btn btn-primary']) ?>
+<?= Html::a('<i class="fa fa-arrow-left"></i>',
+    Url::current(['show_result' => false]),
+    ['class' => 'btn btn-primary']) ?>
 
 <?= $exportMenuClass::widget([
     'dataProvider' => $dataProvider,
